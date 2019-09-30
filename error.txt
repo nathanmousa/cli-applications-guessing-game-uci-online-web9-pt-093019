@@ -28,7 +28,7 @@ Failures:
 
      # ./spec/guessing_cli_spec.rb:24:in `block (3 levels) in <top (required)>'
 
-Finished in 0.03758 seconds (files took 0.13099 seconds to load)
+Finished in 0.04329 seconds (files took 0.1529 seconds to load)
 3 examples, 2 failures
 
 Failed examples:
