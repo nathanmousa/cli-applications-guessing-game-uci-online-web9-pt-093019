@@ -1,0 +1,49 @@
+Guessing CLI
+  user inputs
+    responds to 'exit' (FAILED - 1)
+    responds to an incorrect guess (FAILED - 2)
+    responds to a correct guess (FAILED - 3)
+
+Failures:
+
+  1) Guessing CLI user inputs responds to 'exit'
+     Failure/Error: expect { run_guessing_game }.to output(/Goodbye!/).to_stdout
+
+       expected block to output /Goodbye!/ to stdout, but output nothing
+       Diff:
+       @@ -1,2 +1,2 @@
+       -/Goodbye!/
+       +""
+
+     # ./spec/guessing_cli_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+  2) Guessing CLI user inputs responds to an incorrect guess
+     Failure/Error: expect { run_guessing_game }.to output(/Sorry! The computerguessed 6./).to_stdout
+
+       expected block to output /Sorry! The computer guessed 6./ to stdout, butoutput nothing
+       Diff:
+       @@ -1,2 +1,2 @@
+       -/Sorry! The computer guessed 6./
+       +""
+
+     # ./spec/guessing_cli_spec.rb:16:in `block (3 levels) in <top (required)>'
+
+  3) Guessing CLI user inputs responds to a correct guess
+     Failure/Error: expect { run_guessing_game }.to output(/You guessed the correct number!/).to_stdout
+
+       expected block to output /You guessed the correct number!/ to stdout, but output nothing
+       Diff:
+       @@ -1,2 +1,2 @@
+       -/You guessed the correct number!/
+       +""
+
+     # ./spec/guessing_cli_spec.rb:24:in `block (3 levels) in <top (required)>'
+
+Finished in 0.0381 seconds (files took 0.15831 seconds to load)
+3 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/guessing_cli_spec.rb:6 # Guessing CLI user inputs responds to 'exit'
+rspec ./spec/guessing_cli_spec.rb:11 # Guessing CLI user inputs responds to an incorrect guess
+rspec ./spec/guessing_cli_spec.rb:19 # Guessing CLI user inputs responds to a correct guess
